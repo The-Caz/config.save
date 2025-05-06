@@ -12,7 +12,7 @@ e.g.
 declare -a config_files["panel-colorizer", "kitty", "autostart"]
 declare -a local_share_files["albert", "kwin", "plasma"]
 ```
-Folders are case-sensitive, so be mindful of that.
+Items are case-sensitive, so be mindful of that.
 
 ## Loading configs
 Just run the *setup.sh* file from a terminal. That's it.
