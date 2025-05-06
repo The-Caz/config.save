@@ -1,21 +1,21 @@
 #!/bin/bash
-declare -a config_folders=("", "", "", "", "", "")
-declare -a local_share_folders=("", "", "", "")
+declare -a config_files=("albert", "autostart", "blender", "kitty", "Mailspring", "panel-colorizer", "klassy", "kglobalshortcutsrc", "khotkeysrc", "mimeapps.list")
+declare -a local_share_files=("albert", "sddm", "kwin", "plasma")
 
 rm -rf config/*
 rm -rf local_share/*
 
 echo "Looking for .config folders..."
-for dir in ~/.config/*/
+for dir in ~/.config/*
 do
     name=$(basename $dir)
 
-    containsValue="false"q
-    for i in "${config_folders[@]}"
+    containsValue="false"
+    for i in "${config_files[@]}"
     do
         if [[ ${i//,} == $name ]];
         then
-            echo "Found folder: ${name}"
+            echo "Found file/folder: ${name}"
             containsValue="true"
         fi
     done
@@ -27,16 +27,16 @@ done
 
 echo ''
 echo "Looking for .local/share folders..."
-for dir in ~/.local/share/*/
+for dir in ~/.local/share/*
 do
     name=$(basename $dir)
 
     containsValue="false"
-    for i in "${local_share_folders[@]}"
+    for i in "${local_share_files[@]}"
     do
         if [[ ${i//,} == $name ]];
         then
-            echo "Found folder: ${name}"
+            echo "Found file/folder: ${name}"
             containsValue="true"
         fi
     done
