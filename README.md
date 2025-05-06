@@ -5,14 +5,12 @@ Running the *update.sh* will save any folders you've specified in the arrays at 
 
 ```bash
 declare -a config_folders["folder_a", "folder_b", "folder_c"]
-
 declare -a local_share_folders["folder_a", "folder_b", "folder_c"]
-
-# eg.
+```
+e.g.
+```bash
 declare -a config_folders["panel-colorizer", "kitty", "autostart"]
-
 declare -a local_share_folders["albert", "kwin", "plasma"]
-
 ```
 Folders are case-sensitive, so be mindful of that.
 
