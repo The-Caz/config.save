@@ -1,0 +1,3 @@
+[submodule "config.save"]
+	path = config.save
+	url = https://github.com/The-Caz/config.save
