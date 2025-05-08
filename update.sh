@@ -1,6 +1,6 @@
 #!/bin/bash
-declare -a config_files=("albert", "autostart", "blender", "kitty", "Mailspring", "panel-colorizer", "klassy", "kglobalshortcutsrc", "khotkeysrc", "mimeapps.list")
-declare -a local_share_files=("albert", "sddm", "kwin", "plasma")
+declare -a config_files=()
+declare -a local_share_files=()
 
 rm -rf config/*
 rm -rf local_share/*
